@@ -1,3 +1,60 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  path: /
+  controller: App\Controller\DefaultController::index
+
+contact:
+  path: /contact
+  controller: App\Controller\DefaultController::contact
+
+boutique:
+  path: /boutique
+  controller: App\Controller\BoutiqueController::index
+
+rayon:
+  path: /boutique/rayon/{idCategorie}
+  controller: App\Controller\BoutiqueController::rayon
+
+panier:
+  path: /panier
+  controller: App\Controller\PanierController::index
+
+panier_ajouter:
+  path: /panier/ajouter/{idProduit}/{quantite}
+  controller: App\Controller\PanierController::ajouter
+  defaults:
+    quantite : '1'
+
+panier_enlever:
+  path: /panier/enlever/{idProduit}/{quantite}
+  controller: App\Controller\PanierController::enlever
+  defaults:
+    quantite: '1'
+
+panier_supprimer:
+  path: /panier/supprimer/{idProduit}
+  controller: App\Controller\PanierController::supprimer
+
+panier_vider:
+  path: /panier/vider
+  controller: App\Controller\PanierController::vider
+
+usager_index:
+  path: /usager
+  controller: App\Controller\UsagerController::index
+
+usager_new:
+  path: /usager/new
+  controller: App\Controller\UsagerController::new
+
+
+
+
+
+
+
+
+
+
+
+
+
