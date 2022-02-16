@@ -3,29 +3,32 @@
 {% block title %}Identification{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-
-    {% if app.user %}
-        <div class="mb-3">
-            Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+    <!-- debut du block body -->
+    <div class="row small">
+        <div class="card col-md-4 offset-1">
+            <div class="card-header">
+                <h3><i class="fas fa-user-check"></i> Déjà Membre : Connexion</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="{{ path('login') }}">
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" value="" name="email" id="inputEmail" class="form-control" required
+                               autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Mot de Passe</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control" required>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+                    </div>
+                    <div class="col-md-12 btn-group" style="padding:20px">
+                        <button class="btn btn-primary" type="submit">
+                            Connexion
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-    {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Identification</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Log in
-    </button>
-</form>
+    </div>
+    <!-- fin du block body -->
 {% endblock %}

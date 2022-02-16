@@ -38,6 +38,10 @@ panier_vider:
   path: /panier/vider
   controller: App\Controller\PanierController::vider
 
+panier_valider:
+  path: /panier/valider
+  controller: App\Controller\PanierController::valider
+
 usager_index:
   path: /usager
   controller: App\Controller\UsagerController::index
@@ -45,6 +49,22 @@ usager_index:
 usager_new:
   path: /usager/new
   controller: App\Controller\UsagerController::new
+
+usager_orders:
+  path: /usager/commandes
+  controller: App\Controller\UsagerController::commandes
+
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+app_logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout
+
+login:
+  path: /login
+  controller: App\Controller\SecurityController::login
 
 
 

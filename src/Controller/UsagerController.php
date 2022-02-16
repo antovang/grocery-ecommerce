@@ -9,17 +9,27 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UsagerController extends AbstractController
 {
+    /**
+     * @param UsagerRepository $usagerRepository
+     * @return Response
+     */
     public function index(UsagerRepository $usagerRepository): Response
     {
         return $this->render('usager/index.html.twig', [
-            'usagers' => $usagerRepository->findAll(),
+            'user' => $this->getUser(),
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param UserPasswordHasherInterface $passwordHasher
+     * @return Response
+     */
     public function new(Request $request, EntityManagerInterface $entityManager,
                         UserPasswordHasherInterface $passwordHasher): Response
     {
@@ -43,5 +53,11 @@ class UsagerController extends AbstractController
             'usager' => $usager,
             'form' => $form,
         ]);
+    }
+
+    public function commandes():Response{
+        return $this->render("usager/commandes.html.twig", array(
+
+        ));
     }
 }

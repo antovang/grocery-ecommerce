@@ -2,38 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600b49e5-9cca-481a-b45e-c9fe9213d276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/projet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/carottes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/epicerie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/fruits.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/iut2_info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/junk_food.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/legumes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/nutella.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/oreo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/peche.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pizza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/poires.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pommes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/romanesco.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/tomates.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/PanierService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/boutique.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/panier.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/rayon.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usager/commandes.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PanierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsagerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsagerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Usager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Usager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/PanierService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PanierService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/panier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usager/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usager/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usager/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usager/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +213,9 @@
       <workItem from="1643791707486" duration="6409000" />
       <workItem from="1643965371081" duration="4778000" />
       <workItem from="1644828490796" duration="334000" />
+      <workItem from="1644848444165" duration="4332000" />
+      <workItem from="1645002227103" duration="5760000" />
+      <workItem from="1645026480376" duration="3547000" />
     </task>
     <servers />
   </component>

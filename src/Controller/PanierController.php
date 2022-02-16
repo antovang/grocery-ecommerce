@@ -2,13 +2,19 @@
 
 namespace App\Controller;
 
+use Doctrine\Persistence\ManagerRegistry;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Service\PanierService;
 
 class PanierController extends AbstractController
 {
+    /**
+     * @param PanierService $panier
+     * @return mixed
+     */
     public function index(PanierService $panier){
         $title = 'Panier';
         return $this->render('panier.html.twig',
@@ -20,24 +26,61 @@ class PanierController extends AbstractController
         );
     }
 
+    /**
+     * @param PanierService $panier
+     * @param $idProduit
+     * @param $quantite
+     * @param LoggerInterface $logger
+     * @return mixed
+     */
     public function ajouter(PanierService $panier, $idProduit, $quantite, LoggerInterface $logger){
         $panier->ajouterProduit($idProduit, $quantite);
         $logger->debug(json_encode($panier->getContenu()));
         return $this->redirectToRoute('panier');
     }
 
+    /**
+     * @param PanierService $panier
+     * @param int $idProduit
+     * @return mixed
+     */
     public function enlever(PanierService $panier, int $idProduit){
         $panier->enleverProduit($idProduit, 1);
         return $this->redirectToRoute('panier');
     }
 
+    /**
+     * @param PanierService $panier
+     * @param int $idProduit
+     * @return mixed
+     */
     public function supprimer(PanierService $panier, int $idProduit){
         $panier->supprimerProduit($idProduit);
         return $this->redirectToRoute('panier');
     }
 
+    /**
+     * @param PanierService $panier
+     * @return mixed
+     */
     public function vider(PanierService $panier){
         $panier->vider();
         return $this->redirectToRoute('panier');
+    }
+
+    /**
+     * @param PanierService $panier
+     * @return mixed
+     */
+    public function valider(ManagerRegistry $doctrine,PanierService $panier){
+
+        $em = $doctrine->getManager();
+
+        if($this->getUser()){
+            $panier->panierToCommande($this->getUser(),$em);
+            return $this->redirectToRoute('usager_orders');
+        }else{
+            return $this->redirectToRoute('app_login');
+        }
     }
 }

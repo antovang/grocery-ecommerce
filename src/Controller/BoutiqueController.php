@@ -9,6 +9,10 @@ use App\Repository\ProduitRepository;
 class BoutiqueController extends AbstractController
 {
 
+    /**
+     * @param CategorieRepository $categorieRepository
+     * @return mixed
+     */
     public function index(CategorieRepository $categorieRepository)
     {
         $title = 'Boutique';
@@ -19,6 +23,12 @@ class BoutiqueController extends AbstractController
                 ]);
     }
 
+    /**
+     * @param $idCategorie
+     * @param ProduitRepository $produitRepository
+     * @param CategorieRepository $categoryRepository
+     * @return mixed
+     */
     public function rayon($idCategorie, ProduitRepository $produitRepository, CategorieRepository $categoryRepository)
     {
         $title = 'Boutique';
