@@ -6,7 +6,7 @@
             {% block body %}
                 <div class="card col-md-12">
                     <div class="card-header">
-                        <h1><i class="fas fa-home"></i> {{ default.categorie.titre | trans}}</h1>
+                        <h1><i class="fas fa-store"></i> {{ 'default.navbar.boutique' | trans}} : {{ categories | length }} {{ 'default.categorie.titre' | trans}}</h1>
                     </div>
                     <div class="card-body row">
                         {% for item in categories %}

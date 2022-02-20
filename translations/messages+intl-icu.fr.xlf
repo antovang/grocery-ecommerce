@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="xiNyttb" resname="default.navbar.accueil">
+        <source>default.navbar.accueil</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="RBO4wFC" resname="default.navbar.boutique">
+        <source>default.navbar.boutique</source>
+        <target>Boutique</target>
+      </trans-unit>
+      <trans-unit id="Ox52Bgu" resname="default.navbar.panier">
+        <source>default.navbar.panier</source>
+        <target>Panier</target>
+      </trans-unit>
+      <trans-unit id="88T1kfJ" resname="default.navbar.contact">
+        <source>default.navbar.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="i3vrVuv" resname="default.navbar.mon_compte">
+        <source>default.navbar.mon_compte</source>
+        <target>Mon Compte</target>
+      </trans-unit>
+      <trans-unit id="BGesP5z" resname="default.navbar.login">
+        <source>default.navbar.login</source>
+        <target>Connexion/Inscription</target>
+      </trans-unit>
+      <trans-unit id="_pGVyp_" resname="default.navbar.logout">
+        <source>default.navbar.logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="nABEAvs" resname="default.navbar.commandes">
+        <source>default.navbar.commandes</source>
+        <target>Commandes</target>
+      </trans-unit>
+      <trans-unit id="bAuasF7" resname="default.sidebar.topsales">
+        <source>default.sidebar.topsales</source>
+        <target>Top Ventes</target>
+      </trans-unit>
+      <trans-unit id="j0GG9JB" resname="default.categorie.titre">
+        <source>default.categorie.titre</source>
+        <target>Categories</target>
+      </trans-unit>
+      <trans-unit id="6QopNwS" resname="default.index.accueil">
+        <source>default.index.accueil</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="ey9ym6O" resname="default.index.slogan">
+        <source>default.index.slogan</source>
+        <target>Ici rien à vendre, c'est juste pour apprendre</target>
+      </trans-unit>
+      <trans-unit id="WVqrpJR" resname="default.contact.contact">
+        <source>default.contact.contact</source>
+        <target>Contactez-nous</target>
+      </trans-unit>
+      <trans-unit id="xnKy2Na" resname="default.contact.store">
+        <source>default.contact.store</source>
+        <target>Antonio Van Grieken</target>
+      </trans-unit>
+      <trans-unit id="PaER.AO" resname="default.contact.module">
+        <source>default.contact.module</source>
+        <target>Module MI5</target>
+      </trans-unit>
+      <trans-unit id="lKQdmBO" resname="default.contact.copyright">
+        <source>default.contact.copyright</source>
+        <target>Copyright 2021-2022</target>
+      </trans-unit>
+      <trans-unit id="2w1A2ci" resname="default.rayon.produits">
+        <source>default.rayon.produits</source>
+        <target>Produit(s)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

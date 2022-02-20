@@ -197,14 +197,6 @@ class Usager implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return int
-     */
-    public function getNbCommandes(): int
-    {
-        return count($this->getCommandes());
-    }
-
-    /**
      * @param Commande $commande
      * @return $this
      */

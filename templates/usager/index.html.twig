@@ -17,7 +17,7 @@
                     <tr><th>Activité</th>
                         <td>
                             <a class="btn btn-primary" href="{{ path('usager_orders') }}">
-                                <span class="badge badge-light">{{ user.getNbCommandes() }}</span> Commande(s)
+                                <span class="badge badge-light">{{ user.getCommandes() | length}}</span> Commande(s)
                             </a>
                         </td>
                     </tr>

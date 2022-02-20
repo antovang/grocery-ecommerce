@@ -1,38 +1,38 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ path('index') }}"><i class="fa fa-home"></i>  {{ default.navbar.accueil | trans}}</a>
+        <a class="navbar-brand" href="{{ path('index') }}"><i class="fa fa-home"></i>  {{ 'default.navbar.accueil' | trans}}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('boutique') }}"><i class="fa fa-store"></i>  {{ default.navbar.boutique | trans}}</a>
+                    <a class="nav-link" href="{{ path('boutique') }}"><i class="fa fa-store"></i>  {{ 'default.navbar.boutique' | trans}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('panier') }}"><i class="fa fa-shopping-cart"></i>  {{ default.navbar.panier | trans}}</a>
+                    <a class="nav-link" href="{{ path('panier') }}"><i class="fa fa-shopping-cart"></i>  {{ 'default.navbar.panier' | trans}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('contact') }}"><i class="fa fa-comments"></i>  {{ default.navbar.contact | trans}}</a>
+                    <a class="nav-link" href="{{ path('contact') }}"><i class="fa fa-comments"></i>  {{ 'default.navbar.contact' | trans}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="{{ 'app_login' }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ app.user ? "<i class='fas fa-user-check'></i>" : "<i class='fas fa-user'></i>" }} {{ default.navbar.mon_compte | trans}}
+                        {{ app.user ? "<i class='fas fa-user-check'></i>" : "<i class='fas fa-user'></i>" }} {{ 'default.navbar.mon_compte' | trans}}
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item {{ app.user ? "disabled" : "" }}" href="{{ path('app_login') }}">
-                            <i class="fa fa-check"></i>  {{ default.navbar.login | trans}}
+                            <i class="fa fa-check"></i>  {{ 'default.navbar.login' | trans}}
                         </a>
                         <a class="dropdown-item {{ app.user ? "" : "disabled" }}" href="{{ path('app_logout') }}">
-                            <i class="fa fa-sign-out"></i>  {{ default.navbar.logout | trans}}
+                            <i class="fa fa-sign-out"></i>  {{ 'default.navbar.logout' | trans}}
                         </a>
                         <hr class="dropdown-divider">
                         <a class="dropdown-item {{ app.user ? "" : "disabled" }}" href="{{ path('usager_index') }}">
-                            <i class="fa fa-user"></i>  {{ default.navbar.mon_compte | trans}}
+                            <i class="fa fa-user"></i>  {{ 'default.navbar.mon_compte' | trans}}
                         </a>
                         <a class="dropdown-item {{ app.user ? "" : "disabled" }}" href="{{ path('usager_orders') }}">
-                            <i class="fa fa-book"></i>  {{ default.navbar.commandes | trans}}
+                            <i class="fa fa-book"></i>  {{ 'default.navbar.commandes' | trans}}
                         </a>
                     </div>
                 </li>
@@ -43,11 +43,11 @@
             </form>
 
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="{{ asset('images/' ~ app.request.attributes.get('_locale') ~ '.png')}}"/>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div class="dropdown-menu" style="min-width: 5rem" aria-labelledby="dropdownMenuButton1">
                     {% set route = app.request.attributes.get('_route') %}
                     {% set params = app.request.attributes.get('_route_params') %}
                     {% for locale in supported_locales|split('|') %}

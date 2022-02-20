@@ -37,7 +37,6 @@ class BoutiqueController extends AbstractController
         return $this->render('rayon.html.twig', [
                 'title' => $title,
                 'produits' => $produits,
-                'nbProduits' => count($produits),
                 'categoryLabel' => $categorie->getLibelle(),
         ]);
     }

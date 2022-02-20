@@ -77,7 +77,7 @@ class PanierController extends AbstractController
             $panier->panierToCommande($this->getUser(),$em);
             return $this->redirectToRoute('usager_orders');
         }else{
-            return $this->redirectToRoute('connexion');
+            return $this->redirectToRoute('app_login');
         }
     }
 }

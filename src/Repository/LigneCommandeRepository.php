@@ -19,6 +19,23 @@ class LigneCommandeRepository extends ServiceEntityRepository
         parent::__construct($registry, LigneCommande::class);
     }
 
+    /**
+     * @return LigneCommande[] Returns an array of LigneCommande objects
+     */
+    public function findProduitsPlusVendus()
+    {
+        $em = $this->getEntityManager();
+
+        $sql = $em->createQuery(
+            'SELECT IDENTITY(l.produit), SUM(l.quantite)
+            FROM App\Entity\LigneCommande ligne
+            GROUP BY ligne.produit
+            ORDER BY quantite DESC'
+        )
+            ->setMaxResults(4);
+        return $sql->getResult();
+    }
+
     // /**
     //  * @return LigneCommande[] Returns an array of LigneCommande objects
     //  */
