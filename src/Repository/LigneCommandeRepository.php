@@ -27,12 +27,11 @@ class LigneCommandeRepository extends ServiceEntityRepository
         $em = $this->getEntityManager();
 
         $sql = $em->createQuery(
-            'SELECT IDENTITY(l.produit), SUM(l.quantite)
+            'SELECT (ligne.produit) produit, SUM(ligne.quantite) quantite
             FROM App\Entity\LigneCommande ligne
             GROUP BY ligne.produit
             ORDER BY quantite DESC'
-        )
-            ->setMaxResults(4);
+        )->setMaxResults(4);
         return $sql->getResult();
     }
 

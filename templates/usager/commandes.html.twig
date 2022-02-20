@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Usager{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block body %}
     <!-- debut du block body -->
@@ -15,8 +15,6 @@
                     <tr>
                         <th>N°</th>
                         <th>Date</th>
-                        <th>Produits</th>
-                        <th>Montant</th>
                         <th>Statut</th>
                     </tr>
                     </thead>
@@ -25,8 +23,6 @@
                         <tr class="text-danger" style='font-weight: bold;'>
                             <td>{{ item.getId() }}</td>
                             <td>{{ item.getDateCommande()|date('d-m-Y') }}</td>
-                            <td>TODO</td>
-                            <td>TODO</td>
                             <td>
                                 <i class="fas fa-hourglass-half" data-toggle="tooltip" title="validation en Attente" data-placement="right"></i>
                             </td>

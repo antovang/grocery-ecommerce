@@ -80,4 +80,15 @@ class PanierController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
     }
+
+    /**
+     * @param PanierService $panier
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function nbProduits(PanierService $panier)
+    {
+        $nbProduits = $panier->getContenu() ? $panier->getNbProduits() : 0;
+
+        return $this->render('Article/nbProduits.html.twig', array('nbProduits' => $nbProduits));
+    }
 }

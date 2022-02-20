@@ -1,0 +1,8 @@
+{% for item in produits %}
+    <li class="list-group-item text-center clickable">
+        <a href="{{ path('rayon',{'idCategorie':item.produit.category.id}) }}">
+            <img src="{{ asset(item.produit.visuel) }}" style="height: 40px;"/>
+            <p>{{ item.produit.libelle }}<br><i>{{ item.quantite }} {{ 'topsales.sidebar.ventes' | trans}} </i></p>
+        </a>
+    </li>
+{% endfor %}

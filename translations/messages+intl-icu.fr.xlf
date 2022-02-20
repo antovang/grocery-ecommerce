@@ -73,6 +73,14 @@
         <source>default.rayon.produits</source>
         <target>Produit(s)</target>
       </trans-unit>
+      <trans-unit id="Kt8q3_x" resname="topsales.sidebar.ventes">
+        <source>topsales.sidebar.ventes</source>
+        <target>ventes</target>
+      </trans-unit>
+      <trans-unit id="b6Tvijz" resname="default.navbar.nbProduits">
+        <source>default.navbar.nbProduits</source>
+        <target>Article(s)</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

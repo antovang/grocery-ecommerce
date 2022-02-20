@@ -24,6 +24,12 @@ rayon:
   requirements:
     _locale: '%app.supported_locales%'
 
+search:
+  path: /{_locale}/chercher
+  controller: App\Controller\DefaultController::search
+  requirements:
+    _locale: '%app.supported_locales%'
+
 panier:
   path: /{_locale}/panier
   controller: App\Controller\PanierController::index

@@ -39,7 +39,7 @@
       </trans-unit>
       <trans-unit id="bAuasF7" resname="default.sidebar.topsales">
         <source>default.sidebar.topsales</source>
-        <target>Top sales</target>
+        <target>Top Sales</target>
       </trans-unit>
       <trans-unit id="j0GG9JB" resname="default.categorie.titre">
         <source>default.categorie.titre</source>
@@ -72,6 +72,14 @@
       <trans-unit id="2w1A2ci" resname="default.rayon.produits">
         <source>default.rayon.produits</source>
         <target>Product(s)</target>
+      </trans-unit>
+      <trans-unit id="Kt8q3_x" resname="topsales.sidebar.ventes">
+        <source>topsales.sidebar.ventes</source>
+        <target>sales</target>
+      </trans-unit>
+      <trans-unit id="b6Tvijz" resname="default.navbar.nbProduits">
+        <source>default.navbar.nbProduits</source>
+        <target>Item(s)</target>
       </trans-unit>
     </body>
   </file>
