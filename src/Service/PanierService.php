@@ -182,8 +182,8 @@ class PanierService
             (
                 $commande,$item['produit'],$item['quantite'],$item['produit']->getPrix() * $item['quantite']
             );
-            $em->persist($ligne);
             $commande->addProduit($ligne);
+            $em->persist($ligne);
         }
         $em->flush();
         $this->vider();

@@ -3,14 +3,13 @@
 {% block title %}Identification{% endblock %}
 
 {% block body %}
-    <!-- debut du block body -->
-    <div class="row small">
-        <div class="card col-md-4 offset-1">
+    <div class="row justify-content-center">
+        <div class="col-md-5 card">
             <div class="card-header">
                 <h3><i class="fas fa-user-check"></i> Déjà Membre : Connexion</h3>
             </div>
             <div class="card-body">
-                <form method="post" action="{{ path('login') }}">
+                <form method="post" action="{{ path('app_login') }}">
                     <div class="form-group">
                         <label for="inputEmail">Email</label>
                         <input type="email" value="" name="email" id="inputEmail" class="form-control" required
@@ -21,8 +20,13 @@
                         <input type="password" name="password" id="inputPassword" class="form-control" required>
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
                     </div>
-                    <div class="col-md-12 btn-group" style="padding:20px">
-                        <button class="btn btn-primary" type="submit">
+                    <br/>
+                    <div class="col-md-12 btn-group" style="padding:0px">
+                        <a class="btn btn-primary" href="{{ path('usager_new') }}">
+                            S'inscrire
+                        </a>
+
+                        <button class="btn btn-success" type="submit">
                             Connexion
                         </button>
                     </div>
@@ -30,5 +34,4 @@
             </div>
         </div>
     </div>
-    <!-- fin du block body -->
 {% endblock %}

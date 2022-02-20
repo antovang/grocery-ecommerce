@@ -21,17 +21,17 @@
                     </tr>
                     </thead>
                     <tbody>
-{#                    {% for item in commandes %}#}
-{#                        <tr class="text-danger" style='font-weight: bold;'>#}
-{#                            <td>{{ item.id }}</td>#}
-{#                            <td>{{ item.date }}</td>#}
-{#                            <td>{{ item.quantite }}</td>#}
-{#                            <td>{{ item.prix }}</td>#}
-{#                            <td>#}
-{#                                <i class="fas fa-hourglass-half" data-toggle="tooltip" title="validation en Attente" data-placement="right"></i>#}
-{#                            </td>#}
-{#                        </tr>#}
-{#                    {% endfor %}#}
+                    {% for item in commandes %}
+                        <tr class="text-danger" style='font-weight: bold;'>
+                            <td>{{ item.getId() }}</td>
+                            <td>{{ item.getDateCommande()|date('d-m-Y') }}</td>
+                            <td>TODO</td>
+                            <td>TODO</td>
+                            <td>
+                                <i class="fas fa-hourglass-half" data-toggle="tooltip" title="validation en Attente" data-placement="right"></i>
+                            </td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>

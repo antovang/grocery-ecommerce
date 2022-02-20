@@ -22,6 +22,5 @@ class DefaultController extends AbstractController{
             array('title' => $title));
     }
 
-
 }
 

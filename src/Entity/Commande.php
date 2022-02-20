@@ -25,7 +25,7 @@ class Commande
     #[ORM\Column(type: 'string', length: 255)]
     private $statut;
 
-    #[ORM\OneToMany(mappedBy: 'id_commande', targetEntity: LigneCommande::class)]
+    #[ORM\OneToMany(mappedBy: 'commande', targetEntity: LigneCommande::class)]
     private $produits;
 
     public function __construct()

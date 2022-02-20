@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use Doctrine\Persistence\ManagerRegistry;
-use Monolog\Logger;
-use Psr\Log\LoggerInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Service\PanierService;
@@ -30,12 +28,10 @@ class PanierController extends AbstractController
      * @param PanierService $panier
      * @param $idProduit
      * @param $quantite
-     * @param LoggerInterface $logger
      * @return mixed
      */
-    public function ajouter(PanierService $panier, $idProduit, $quantite, LoggerInterface $logger){
+    public function ajouter(PanierService $panier, $idProduit, $quantite){
         $panier->ajouterProduit($idProduit, $quantite);
-        $logger->debug(json_encode($panier->getContenu()));
         return $this->redirectToRoute('panier');
     }
 
@@ -69,6 +65,7 @@ class PanierController extends AbstractController
     }
 
     /**
+     * @param ManagerRegistry $doctrine
      * @param PanierService $panier
      * @return mixed
      */
@@ -80,7 +77,7 @@ class PanierController extends AbstractController
             $panier->panierToCommande($this->getUser(),$em);
             return $this->redirectToRoute('usager_orders');
         }else{
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('connexion');
         }
     }
 }

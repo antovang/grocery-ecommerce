@@ -1,4 +1,14 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+
+    <div class="col-md-12 btn-group" style="padding:0px">
+        <a class="btn btn-primary" href="{{ path('app_login') }}">
+            Connexion
+        </a>
+
+        <button class="btn btn-success">
+            {{ button_label|default('S\'inscrire') }}
+        </button>
+    </div>
+
 {{ form_end(form) }}

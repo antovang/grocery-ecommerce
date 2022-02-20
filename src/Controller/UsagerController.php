@@ -14,14 +14,15 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class UsagerController extends AbstractController
 {
     /**
-     * @param UsagerRepository $usagerRepository
      * @return Response
      */
-    public function index(UsagerRepository $usagerRepository): Response
+    public function index(): Response
     {
-        return $this->render('usager/index.html.twig', [
-            'user' => $this->getUser(),
-        ]);
+        $title = "Mon Compte";
+        return $this->render('usager/index.html.twig', array(
+            'title' => $title,
+            'user' => $this->getUser()
+        ));
     }
 
     /**
@@ -55,9 +56,14 @@ class UsagerController extends AbstractController
         ]);
     }
 
+    /**
+     * @return Response
+     */
     public function commandes():Response{
+        $title =  "Commandes";
         return $this->render("usager/commandes.html.twig", array(
-
+            'title' => $title,
+            'commandes' => $this->getUser()->getCommandes(),
         ));
     }
 }
